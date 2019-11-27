@@ -7,7 +7,7 @@
 ;* Date:06/10/2012 *
 ;*Description: Verkehrsampel mit einstellbarer Zeit und darüber hinaus Tag&Nacht Betrieb*
 ;*************************************************************************
-;* History: *
+;* History: test*
 ;* creation V1.00 *
 ;*************************************************************************
 
