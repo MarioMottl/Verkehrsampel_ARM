@@ -1,20 +1,3 @@
-        		AREA UART, CODE
-				INCLUDE STM32_F103RB_MEM_MAP.INC
-				EXPORT __main
-
-hello_txt 		DCB "Mario_Mottl\r\n",0	;null terminated hello
-
-; -------------------------- MAIN Programm ------------------------------------
-__main			PROC
-				MOV      r0,#9600
-				BL       uart_init
-				
-				LDR 	 R0,=hello_txt
-				BL       uart_put_string
-
-__main_endless	B		__main_endless				 ; Endlosschleife	
-                ENDP
-
 ;******************************************************************************
 ;*            U N T E R P R O G R A M M:    uart_init                         *
 ;*                                                                            *
@@ -59,7 +42,7 @@ uart_init			PROC
 					LDR      R2,=RCC_APB2ENR
 					STR      R1,[R2]
 
-					LDR      R1,=baudrate_const  ; Baudrate für USART festlegen  
+					LDR      R1,=baudrate_const  ; Baudrate fï¿½r USART festlegen  
 					LDR	 	 R1,[R1]
 					UDIV     r1,r1,r0
 					LDR      R2,=USART1_BRR
