@@ -5,7 +5,7 @@
 ;* Input:                                                                     *
 ;* return:	 	                                                              *
 ;******************************************************************************
-
+				EXPORT wait_50ms
 wait_50ms		PROC
 				push 	{R0-R2,LR}	   ; save link register to Stack
                 MOV     R0,#0x32	   ; wait 50ms

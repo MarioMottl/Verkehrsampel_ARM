@@ -24,6 +24,7 @@
 ;AMPEL_SIDE_GELB     EQU LED3
 ;AMPEL_SIDE_GRUEN    EQU LED2
 
+                EXPORT output_phase
 output_phase    PROC
                 PUSH{R0-R2, LR}
                 LDR R2, =GPIOB_ODR

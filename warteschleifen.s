@@ -5,6 +5,7 @@
 ;* Input:                                                                     *
 ;* return:	 	                                                              *
 ;******************************************************************************
+				EXPORT wait_500ms
 wait_500ms		PROC
 				push 	{R0-R2,LR}	   ; save link register to Stack
                 MOV     R0,#0x1F4	  ;/1000 ; wait 500ms
@@ -20,8 +21,6 @@ wait_ms_loop1	SUB 	R2,R2,#1
 				ENDP
 				
 				ALIGN
-
-				END
 				
 ;******************************************************************************
 ;*            U N T E R P R O G R A M M:    wait_5s	                          *
@@ -30,6 +29,7 @@ wait_ms_loop1	SUB 	R2,R2,#1
 ;* Input:     none                                                            *
 ;* return:	  none	                                                          *
 ;******************************************************************************
+				EXPORT wait_5s
 wait_5s			PROC
 				push 	{R0-R2,LR}	   ; save link register to Stack
                 MOV     R0,#0x1388	   ; wait R0 * 1ms -> 5000ms
@@ -43,3 +43,4 @@ wait_ms_loop1	SUB 	R2,R2,#1
 				BNE		wait_ms_loop
 				POP 	{R0-R2,PC}	   ;restore link register to Programm Counter and return
                 ENDP
+				END

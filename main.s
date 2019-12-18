@@ -1,11 +1,11 @@
 ;
-; @author:  Mottlö
+; @author:  Mottl
 ; @version: 2019-12-04
 ;
 ;
+
 				
-				
-				AREA BLINKEN, CODE, READONLY
+				AREA Mainprogram, CODE, READONLY
 				INCLUDE STM32_F103RB_MEM_MAP.INC
 
 				INCLUDE ./uart.s

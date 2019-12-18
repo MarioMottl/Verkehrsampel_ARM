@@ -18,7 +18,7 @@ status_msg_day      DCB "Tag : 1\r\n Nacht : 0",0
 status_msg_night    DCB "Nacht : 1\r\nTag : 0",0
 
 
-			AREA IN_OUT_BIT, CODE, READONLY
+			AREA Hauptprogramm, CODE, READONLY
 			INCLUDE STM32_F103RB_MEM_MAP.INC
 			EXPORT __main
 __main      BL init_ports

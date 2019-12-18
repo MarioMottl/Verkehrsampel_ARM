@@ -5,7 +5,7 @@
 ;* Input: keine *
 ;* return: keine *
 ;*************************************************************************
-
+				EXPORT waitvar
 waitvar			PROC;
 				PUSH {R0,R1,LR}
 				LDR R0,=GPIOA_IDR

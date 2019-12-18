@@ -5,7 +5,7 @@
 ;* Input: keine *
 ;* return: keine *
 ;*************************************************************************
-
+            EXPORT init_ports
 init_ports  push {R1,R0, LR} ; save link register to Stack
             ;Start of definition of all Switches
             LDR R1,=GPIOA_CRL ; set Port Pins PA0-PA7 to Pull Up/Down
